@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.HttpApi.Client.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.DbMigrator", "src\Ecommerce.DbMigrator\Ecommerce.DbMigrator.csproj", "{AA94D832-1CCC-4715-95A9-A483F23A1A5D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "identity", "identity", "{5FC979F1-E5AF-446D-8B3F-2A9EAAFF5FF8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{5FC979F1-E5AF-446D-8B3F-2A9EAAFF5FF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{359F4D75-E267-48E0-9F76-27E15E0EC27B}"
 EndProject
