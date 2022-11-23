@@ -12,5 +12,6 @@ namespace Ecommerce.Products
         Bundle,
         Virtual,
         Downloadable,
+        
     }
 }
