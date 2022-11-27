@@ -56,7 +56,7 @@ public class EcommerceAuthServerModule : AbpModule
         {
             builder.AddValidation(options =>
             {
-                options.AddAudiences("Ecommerce");
+                options.AddAudiences("Ecommerce", "Ecommerce.Admin");
                 options.UseLocalServer();
                 options.UseAspNetCore();
             });
@@ -111,8 +111,8 @@ public class EcommerceAuthServerModule : AbpModule
 
         Configure<AbpAuditingOptions>(options =>
         {
-                //options.IsEnabledForGetRequests = true;
-                options.ApplicationName = "AuthServer";
+            //options.IsEnabledForGetRequests = true;
+            options.ApplicationName = "AuthServer";
         });
 
         if (hostingEnvironment.IsDevelopment())
@@ -149,7 +149,7 @@ public class EcommerceAuthServerModule : AbpModule
             var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
             dataProtectionBuilder.PersistKeysToStackExchangeRedis(redis, "Ecommerce-Protection-Keys");
         }
-        
+
         context.Services.AddSingleton<IDistributedLockProvider>(sp =>
         {
             var connection = ConnectionMultiplexer
@@ -200,7 +200,7 @@ public class EcommerceAuthServerModule : AbpModule
         app.UseCors();
         app.UseAuthentication();
         app.UseAbpOpenIddictValidation();
-       
+
         if (MultiTenancyConsts.IsEnabled)
         {
             app.UseMultiTenancy();

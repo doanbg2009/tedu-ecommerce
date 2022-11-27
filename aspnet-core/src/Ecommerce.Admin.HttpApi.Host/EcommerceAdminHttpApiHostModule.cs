@@ -75,7 +75,7 @@ public class EcommerceAdminHttpApiHostModule : AbpModule
             {
                 options.FileSets.ReplaceEmbeddedByPhysical<EcommerceDomainSharedModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}Ecommerce.Admin.Domain.Shared"));
+                        $"..{Path.DirectorySeparatorChar}Ecommerce.Domain.Shared"));
                 options.FileSets.ReplaceEmbeddedByPhysical<EcommerceDomainModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
                         $"..{Path.DirectorySeparatorChar}Ecommerce.Domain"));
@@ -229,7 +229,7 @@ public class EcommerceAdminHttpApiHostModule : AbpModule
 
             var configuration = context.GetConfiguration();
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
-            options.OAuthScopes("Ecommerce");
+            options.OAuthScopes("Ecommerce.Admin");
         });
 
         app.UseAuditing();

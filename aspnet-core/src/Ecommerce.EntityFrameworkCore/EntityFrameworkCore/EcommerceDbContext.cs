@@ -1,4 +1,5 @@
-﻿using Ecommerce.Inventories;
+﻿using Microsoft.EntityFrameworkCore;
+using Ecommerce.Inventories;
 using Ecommerce.InventoryTickets;
 using Ecommerce.Manufacturers;
 using Ecommerce.Orders;
@@ -6,8 +7,6 @@ using Ecommerce.ProductAttributes;
 using Ecommerce.ProductCategories;
 using Ecommerce.Products;
 using Ecommerce.Promotions;
-using Microsoft.EntityFrameworkCore;
-
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
